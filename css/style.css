@@ -26,16 +26,79 @@ body {
     color: white;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.just-center {
+    justify-content: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.btn {
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 12px 35px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#btn-add {
+    background-color: var(--font-color);
+    color: black;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 0px 12px;
+}
+
+.display-tablet {
+    display: none;
+}
+
 /* HEADER */
 header {
     background-color: black;
     width: var(--fixed-space-sm);
     position: fixed;
     height: calc(100%  - var(--fixed-space-md));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.inside-content {
-    padding-top: var(--fixed-space-md);
+header img {
+    width: 30px;
+    padding-top: 5px;
+}
+
+#logo-lg {
+    display: none;
+}
+
+.playlist {
+    padding-left: 0px;
+}
+
+.div-border {
+    width: 180px;
+    border: 1px solid var(--font-color);
+}
+
+.add-pl {
+    padding-left: 0px;
 }
 
 /* MAIN */
@@ -50,8 +113,15 @@ header {
     height: var(--fixed-space-md);
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    width: 100%;
+    width: calc(100% - var(--fixed-space-sm));
+    top: 0;
+    right: 0;
     z-index: 1;
+    justify-content: right;
+}
+
+.inside-content {
+    padding-top: var(--fixed-space-md);
 }
 
 /* FOOTER */
@@ -72,13 +142,50 @@ footer {
 /* SCREEN @768px */
 
 @media screen and (min-width: 768px) {
+
+
+    /* Utility */
+    .display-tablet {
+        display: block;
+    }
+
     header {
         width: var(--fixed-space-lg);
     }
 
+    header img  {
+        display: block;
+    }
+
+    header div {
+        padding-left: 10px;
+    }
+
+    header ul li {
+        display: flex;
+        align-items: center;
+    }
+
+    #logo-sm {
+        display: none;
+    }
+
+    #logo-lg {
+        display: block;
+        width: 150px;
+    }
+
+    .playlist {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
     .main-container {
         padding-left: var(--fixed-space-lg);
     }
-
-
+    
+    .inside-header {
+        width: calc(100% - var(--fixed-space-lg));
+    }
 }
