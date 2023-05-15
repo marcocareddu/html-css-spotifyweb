@@ -18,65 +18,207 @@
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div>
-            <img id="logo-sm" src="./img/logo-small.svg" alt="Logo di Spotify piccolo">
-            <img class="display-tablet" id="logo-lg" src="./img/logo.svg" alt="Logo di Spotify grande">
-            <nav>
-                <ul>
-                    <li><a href="#"><img src="./img/home.svg" alt="Icona Casa"></a><span class="display-tablet">Home</span></li>
-                    <li><a href="#"><img src="./img/search.svg" alt="Icona Lente ingrandimento"></a><span class="display-tablet">Cerca</span></li>
-                    <li><a href="#"><img src="./img/libreria.svg" alt="Icona di Libreria"></a><span class="display-tablet">La tua libreria</span></li>
-                </ul>
-            </nav>
-
-            <div class="playlist display-tablet">
-                <a href="#">PLAYLIST</a>
-                <div class="add-pl"><a href="#" id="btn-add">+</a>Crea Playlist</div>
-                <ul>
-                    <li>Nuova Playlist</li>
-                    <li>Nuova Playlist</li>
-                    <li>Nuova Playlist</li>
-                    <li>Nuova Playlist</li>
-                    <li>Nuova Playlist</li>
-                    <li>Nuova Playlist</li>
-                    <li>Nuova Playlist</li>
-                    <li>Nuova Playlist</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div>
-            <div class="d-flex align-center">
-                <a href="#"><img src="./img/download.svg" alt="Freccia verso il basso"></a>
-                <span class="display-tablet">Installa App</span>
-            </div>
-
-            <div class="div-border display-tablet"></div>
-
-            <div class="d-flex align-center">
-                <a href="#"><img src="./img/profile.svg" alt="Icona utente"></a>
-                <span class="display-tablet">John Doe</span>
-            </div>
-        </div>
-    </header>
-
     <!-- MAIN -->
-    <main>
+    <main class="d-flex">
+        
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div>
+                <img id="logo-sm" src="./img/logo-small.svg" alt="Logo di Spotify piccolo">
+                <img class="display-tablet" id="logo-lg" src="./img/logo.svg" alt="Logo di Spotify grande">
+                <nav>
+                    <ul>
+                        <li class="subtitle"><a href="#"><img src="./img/home.svg" alt="Icona Casa"></a><span class="display-tablet">Home</span></li>
+                        <li class="subtitle"><a href="#"><img src="./img/search.svg" alt="Icona Lente ingrandimento"></a><span class="display-tablet">Cerca</span></li>
+                        <li class="subtitle"><a href="#"><img src="./img/libreria.svg" alt="Icona di Libreria"></a><span class="display-tablet">La tua libreria</span></li>
+                    </ul>
+                </nav>
+
+                <!-- PLAYLIST SECTION -->
+                <div class="playlist display-tablet">
+                    <a href="#" class="">PLAYLIST</a>
+                    <div class="add-pl subtitle d-flex align-center"><a href="#" id="btn-add">+</a>Crea Playlist</div>
+                    <ul>
+                        <li class="subtitle">Nome Playlist</li>
+                        <li class="subtitle">Nome Playlist</li>
+                        <li class="subtitle">Nome Playlist</li>
+                        <li class="subtitle">Nome Playlist</li>
+                        <li class="subtitle">Nome Playlist</li>
+                        <li class="subtitle">Nome Playlist</li>
+                        <li class="subtitle">Nome Playlist</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="download-side">
+
+                <div class="subtitle">
+                    <a href="#"><img id="down-arrow" src="./img/download.svg" alt="Freccia verso il basso"></a>
+                    <span class="display-tablet">Installa App</span>
+                </div>
+    
+                <div class="div-border display-tablet"></div>
+    
+                <div class="">
+                    <a href="#"><img id="user" src="./img/profile.svg" alt="Icona utente"></a>
+                    <span class="display-tablet">John Doe</span>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- MAIN CONTAINER -->
         <div class="main-container">
+
+            <!-- HEADER -->
             <div class="inside-header align-center d-flex">
                 <a href="#" class="btn">EFFETTUA L'UPGRADE</a>
             </div>
             <div class="inside-content">
                 
+                <!-- NAVBAR -->
+                <div class="menu d-flex just-center align-center">
+                    <ul class="d-flex just-center align-center wrap">
+                        <li><a href="#">IN EVIDENZA</a></li>
+                        <li><a href="#">PODCAST</a></li>
+                        <li><a href="#">CLASSIFICHE</a></li>
+                        <li><a href="#">GENERI E MOOD</a></li>
+                        <li><a href="#">NUOVE USCITE</a></li>
+                        <li><a href="#">SCOPRI</a></li>
+                    </ul>
+                </div>
+
+                <!-- RECENTLY SECTION -->
+                <div class="recently thumb-container">
+                    <h1 class="padding-top-bot">Recently Played</h1>
+                    
+                    <div class="row d-flex wrap">
+                        <div class="col">
+                            <div>
+                                <img src="./img/metal_lifting.jpg" alt="">
+                                <i class="fa-regular fa-circle-play fa-2x"></i>
+                            </div>
+                            <h4>Heavy Metal</h4>
+                            <h5 class="subtitle">Subtitle</h5>
+                        </div>
+                        <div class="col">
+                            <img src="./img/stranger.jpeg" alt="">
+                            <h4>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h4>
+                            <h5 class="subtitle">Kyle Dixon & Michel Stain</h5>
+                        </div>
+                        <div class="col">
+                            <img src="./img/aquietplace.jpeg" alt="">
+                            <h4>A quiet Place</h4>
+                            <h5 class="subtitle">Subtitle</h5>
+                        </div>
+                        <div class="col"><img src="./img/split.jpeg" alt="">
+                            <h4>Split</h4>
+                            <h5 class="subtitle">Subtitle</h5>
+                        </div>
+                        <div class="col"><img src="./img/cure.jpeg" alt="">
+                            <h4>A cure for wellness</h4>
+                            <h5 class="subtitle">Subtitle</h5>
+                        </div>
+                        <div class="col"><img src="./img/sinister.jpeg" alt="">
+                            <h4>Sinister</h4>
+                            <h5 class="subtitle">Subtitle</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CREATED FOR SECTION -->
+                <div class="created4 thumb-container">
+                    <h1 class="padding-top-bot">Creato per John Doe</h1>
+                    <p class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</p>
+
+                    <div class="row d-flex wrap">
+                        <div class="col">
+                            <img src="./img/radar.jpeg" alt="">
+                            <h4>Release Radar</h4>
+                        </div>
+                        <div class="col">
+                            <img src="./img/mixdaily.jpeg" alt="">
+                            <h4>Daily Mix 1</h4>
+                        </div>
+                    </div>
+                </div>  
+
+
+                <!-- POPULAR SECTION -->
+                <div class="popular thumb-container">
+                    <h1 class="padding-top-bot">Artisti più popolari</h1>
+                    <p class="subtitle">Più ascolti, più accurati saranno i suggerimenti.</p>
+
+                    <div class="row d-flex wrap">
+                        <div class="col">
+                            <img class="round-img" src="./img/youg.jpeg" alt="">
+                            <h4>Lana del Ray</h4>
+                        </div>
+                        <div class="col">
+                            <img class="round-img" src="./img/einaudi.jpeg" alt="">
+                            <h4>Ludovico Einaudi</h4>
+                        </div>
+                    </div>
+
+                </div>  
             </div>
         </div>
     </main>
 
     <!-- FOOTER -->
-    <footer></footer>
+    <footer class="d-flex just-bet align-center">
+
+        <!-- ON PLAYING SECTION -->
+        <div class="on-playing d-flex just-bet">
+            <div class="d-flex just-center align-center">
+                <img src="./img/sinister.jpeg" alt="">
+                <div>
+                    <h1>Sinister</h1>
+                    <a href="#"><span class="subtitle">Brano</span></a>
+                    <a href="#"><span class="subtitle">Nome</span></a>
+                </div>
+            </div>
+            
+            <div class="d-flex just-center align-center wrap">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-regular fa-folder"></i></a>
+            </div>
+        </div>
+
+        <!-- PLAYER SECTION -->
+        <div class="player">
+            <div class="controls d-flex just-center align-center">
+                <a href="#"><i class="fa-solid fa-shuffle"></i></a>
+                <a href="#"><i class="fa-solid fa-backward-step"></i></a>
+                <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                <a href="#"><i class="fa-solid fa-forward-step"></i></a>
+                <a href="#"><i class="fa-solid fa-rotate-right"></i></a>
+            </div>
+
+
+            <div class="bar d-flex just-center align-center">
+                <span>0:25</span>
+                <div class="time-bar">
+                    <div class="progress"></div>
+                </div>
+                <span>4:35</span>
+            </div>
+
+        </div>
+
+        <!-- SHARE SECTION -->
+        <div class="share d-flex just-center align-center">
+            <a href="#"><i class="fa-solid fa-list"></i></a>
+            <a href="#"><i class="fa-solid fa-display"></i></a>
+            <a href="#"><i class="fa-solid fa-volume-high"></i></a>
+            <div class="time-bar">
+                <div class="progress"></div>
+            </div>
+
+        </div>
+
+    </footer>
     
 </body>
 </html>

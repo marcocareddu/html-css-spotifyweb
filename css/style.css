@@ -16,14 +16,23 @@
     --fixed-space-sm: 50px;
     --fixed-space-md: 80px;
     --fixed-space-lg: 200px;
+    --padding-space-xxs: 5px;
+    --padding-space-xs: 10px;
+    --padding-space-sm: 20px;
+    --padding-space-md: 40px;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 24px;
 }
 
 /* UTILITY */
 body {
     font-family: 'Montserrat', sans-serif;
-
-    /* ! DA RIMUOVERE */
     color: white;
+}
+
+.wrap {
+    flex-wrap: wrap;
 }
 
 .d-flex {
@@ -38,21 +47,50 @@ body {
     justify-content: center;
 }
 
+.just-bet {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.padding-top-bot {
+    padding: var(--padding-space-sm) 0px;
+}
+
 a {
-    color: white;
+    color: var(--font-color);
     text-decoration: none;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: var(--font-size-md);
+}
+
+h4 {
+    font-size: var(--font-size-sm);
 }
 
 ul li {
     list-style-type: none;
 }
 
+li:hover {
+    color: white;
+}
+
+a:hover {
+    color: white;
+} 
+
 .btn {
     border: 1px solid white;
     border-radius: 25px;
     padding: 12px 35px;
     font-size: 12px;
-    font-weight: 500;
+    color: white;
 }
 
 #btn-add {
@@ -67,19 +105,23 @@ ul li {
     display: none;
 }
 
-/* HEADER */
-header {
+.round-img {
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+/* SIDEBAR */
+.sidebar {
     background-color: black;
-    width: var(--fixed-space-sm);
-    position: fixed;
-    height: calc(100%  - var(--fixed-space-md));
+    flex: 0 0 var(--fixed-space-sm);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: auto;
 }
 
-header img {
+.sidebar img {
     width: 30px;
     padding-top: 5px;
 }
@@ -89,51 +131,175 @@ header img {
 }
 
 .playlist {
-    padding-left: 0px;
+    padding: 15px 0px 5px 0px;
+}
+
+.playlist * {
+    padding: 5px 0px;
+}
+
+.playlist > a {
+    color: white;
+}
+
+#down-arrow {
+    width: 15px;
+}
+
+#user {
+    width: 30px;
+    height: 30px;
+    background-color: var(--font-color);
+    border-radius: 100%;
+}
+
+.download-side > div:not(.div-border) {
+    padding: var(--padding-space-xs) 0px;
+}
+
+.download-side span {
+    padding-left: var(--padding-space-xxs);
 }
 
 .div-border {
     width: 180px;
-    border: 1px solid var(--font-color);
-}
-
-.add-pl {
-    padding-left: 0px;
+    border-top: 1px solid var(--font-color);
 }
 
 /* MAIN */
+main {
+    height: calc(100vh - 80px);
+}
+
 .main-container {
-    height: calc(100vh - var(--fixed-space-md));
     background-color: var(--main-color);
     overflow-y: auto;
-    padding-left: var(--fixed-space-sm);
+    flex: 1 1 auto;
 }
 
 .inside-header {
     height: var(--fixed-space-md);
     background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    width: calc(100% - var(--fixed-space-sm));
-    top: 0;
-    right: 0;
-    z-index: 1;
+    position: sticky;
+    top: 0px;
+    right: 0px;
     justify-content: right;
 }
 
-.inside-content {
-    padding-top: var(--fixed-space-md);
+.main-container > div {
+    padding: 0px var(--padding-space-sm);
+}
+
+.menu {
+    height: var(--fixed-space-md);
+    font-size: var(--font-size-sm);
+}
+
+.menu li {
+    padding: 0 var(--padding-space-xs);
+}
+
+menu li a {
+    color: var(--font-color);
+}
+
+/* RECENTLY */
+.col img {
+    max-width: 100%;
+}
+
+.col img:hover {
+    cursor: pointer;
+    filter: brightness(0.5);
+}
+
+.col i {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.col:hover i {
+    display: initial;
+}
+
+.col > div {
+    position: relative;
+}
+
+.thumb-container * {
+    padding: var(--padding-space-xxs) 0px;
+}
+
+.row {
+    gap: 15px;
+}
+
+.col {
+    height: 100%;
+    text-align: center;
+    flex-basis: calc(100% / 2 - 15px);
+}
+
+.subtitle {
+    color: var(--font-color);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
 }
 
 /* FOOTER */
 footer {
     height: var(--fixed-space-md);
     background-color: var(--secondary-color);
-    position: fixed;
-    width: 100%;
 }
 
+footer i {
+    color: white;
+    padding: 0px var(--padding-space-xxs)
+}
 
+.on-playing img {
+    padding-right: var(--padding-space-xs);
+}
 
+.on-playing, .share {
+    flex-basis: 25%;
+    padding: 0px var(--padding-space-xs);
+}
+
+.on-playing img {
+    height: 50px;
+    width: 50px;
+}
+
+.on-playing h1 {
+    font-size: var(--font-size-xs);
+}
+
+.player {
+    flex-basis: 500px;
+}
+
+.time-bar {
+    width: 100%;
+    height: 5px;
+    background-color: var(--bar-empty-color);
+}
+
+.progress {
+    height: 100%;
+    width: 25%;
+    background: var(--bar-full-color);
+}
+
+.bar span {
+    padding: 0px var(--padding-space-xxs);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+}
 
 /************************/
 /*      RESPONSIVE      */
@@ -143,27 +309,27 @@ footer {
 
 @media screen and (min-width: 768px) {
 
-
     /* Utility */
     .display-tablet {
         display: block;
     }
 
-    header {
-        width: var(--fixed-space-lg);
+    .sidebar {
+        flex: 0 0 var(--fixed-space-lg);
     }
 
-    header img  {
+    .sidebar img  {
         display: block;
     }
 
-    header div {
-        padding-left: 10px;
+    .sidebar > div {
+        padding-left: var(--padding-space-xs);
     }
 
-    header ul li {
+    .sidebar ul li {
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
 
     #logo-sm {
@@ -173,6 +339,7 @@ footer {
     #logo-lg {
         display: block;
         width: 150px;
+        height: 80px;
     }
 
     .playlist {
@@ -181,11 +348,32 @@ footer {
         justify-content: flex-start;
         flex-direction: column;
     }
-    .main-container {
-        padding-left: var(--fixed-space-lg);
+
+    .col {
+        flex-basis: calc(100% / 4 - 30px);
     }
-    
-    .inside-header {
-        width: calc(100% - var(--fixed-space-lg));
+
+    .download-side div {
+        display: flex;
+        align-items: center;
     }
 }
+
+/* SCREEN @992px */
+@media screen and (min-width: 1200px) {
+
+    .col {
+        flex-basis: calc(100% / 6 - 60px);
+    }
+
+    .recently > .row {
+        justify-content: space-between;
+    }
+
+}
+
+
+
+
+
+
