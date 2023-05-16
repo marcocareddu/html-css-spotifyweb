@@ -23,6 +23,9 @@
     --font-size-xs: 12px;
     --font-size-sm: 14px;
     --font-size-md: 24px;
+    --font-size-lg: 30px;
+    --font-size-xl: 40px;
+    --font-size-xxl: 60px;
 }
 
 /* UTILITY */
@@ -91,8 +94,12 @@ a:hover {
     border: 1px solid white;
     border-radius: 25px;
     padding: 12px 35px;
-    font-size: 12px;
+    font-size: var(--font-size-xs);
     color: white;
+}
+
+.btn:hover {
+    font-size: 14px;
 }
 
 #btn-add {
@@ -101,6 +108,10 @@ a:hover {
     font-size: 30px;
     font-weight: 500;
     padding: 0px 12px;
+}
+
+#btn-add:hover {
+    background-color: var(--bar-full-color);
 }
 
 .display-tablet {
@@ -214,12 +225,11 @@ menu li a {
     transition: filter 0.5s;
 }
 
-.thumbnail:hover {
+.col:hover {
     cursor: pointer;
-    filter: brightness(0.5);
 }
 
-.thumbplay:hover .thumbnail {
+.col:hover .thumbnail {
     filter: brightness(0.5);
 }
 
@@ -230,9 +240,10 @@ menu li a {
     top: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    font-size: var(--font-size-xxl);
 }
 
-.col div:hover .thumbplay {
+.col:hover .thumbplay {
     display: initial;
 }
 
