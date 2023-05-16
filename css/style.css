@@ -63,6 +63,7 @@ a {
     color: var(--font-color);
     text-decoration: none;
     font-weight: 700;
+    transition: color 0.5s;
 }
 
 h1 {
@@ -75,6 +76,7 @@ h4 {
 
 ul li {
     list-style-type: none;
+    transition: color 0.5s;
 }
 
 li:hover {
@@ -208,12 +210,20 @@ menu li a {
     max-width: 100%;
 }
 
-.col img:hover {
+.thumbnail {
+    transition: filter 0.5s;
+}
+
+.thumbnail:hover {
     cursor: pointer;
     filter: brightness(0.5);
 }
 
-.col i {
+.thumbplay:hover .thumbnail {
+    filter: brightness(0.5);
+}
+
+.thumbplay {
     display: none;
     position: absolute;
     left: 50%;
@@ -222,7 +232,7 @@ menu li a {
     cursor: pointer;
 }
 
-.col:hover i {
+.col div:hover .thumbplay {
     display: initial;
 }
 
