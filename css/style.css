@@ -226,6 +226,12 @@ main {
     font-size: var(--font-size-sm);
 }
 
+.border-active {
+    border-bottom: 2px solid var(--detail-color);
+    width: 35%;
+    text-align: center;
+}
+
 .menu li {
     padding: 0 var(--padding-space-xs);
 }
@@ -454,11 +460,4 @@ footer i:hover {
 
 }
 
-
-
-.prova {
-    border-bottom: 2px solid var(--detail-color);
-    width: 35%;
-    text-align: center;
-}
 
