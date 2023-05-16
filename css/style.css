@@ -294,6 +294,7 @@ footer i {
 
 footer i:hover {
     color: var(--detail-color);
+    font-size: var(--font-size-xl);
 }
 
 .on-playing img {
