@@ -140,6 +140,10 @@ a:hover {
     padding-top: 5px;
 }
 
+nav li:first-of-type {
+    border-left: 2px solid var(--detail-color);
+}
+
 #logo-lg {
     display: none;
 }
@@ -203,6 +207,14 @@ main {
     top: 0px;
     right: 0px;
     justify-content: right;
+}
+
+.menu li:first-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2px;
+    line-height: 20px;
 }
 
 .main-container > div {
@@ -342,6 +354,10 @@ footer i:hover {
     background-color: var(--bar-full-color);
 }
 
+.bar {
+    padding-top: var(--padding-space-xs);
+}
+
 .bar:hover .progress {
     background-color: var(--detail-color);
 }
@@ -377,10 +393,6 @@ footer i:hover {
         display: block;
     }
 
-    .sidebar > div {
-        padding-left: var(--padding-space-xs);
-    }
-
     .sidebar ul li {
         display: flex;
         align-items: center;
@@ -395,6 +407,11 @@ footer i:hover {
         display: block;
         width: 150px;
         height: 80px;
+        padding-left: var(--padding-space-xs);
+    }
+
+    nav li {
+        padding-left: var(--padding-space-xs);
     }
 
     .playlist {
@@ -402,10 +419,15 @@ footer i:hover {
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
+        padding-left: var(--padding-space-xs);
     }
 
     .col {
         flex-basis: calc(100% / 4 - 30px);
+    }
+
+    .download-side {
+        padding-left: var(--padding-space-xs);
     }
 
     .download-side div {
@@ -434,6 +456,9 @@ footer i:hover {
 
 
 
-
-
+.prova {
+    border-bottom: 2px solid var(--detail-color);
+    width: 35%;
+    text-align: center;
+}
 
