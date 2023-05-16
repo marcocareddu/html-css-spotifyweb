@@ -140,10 +140,6 @@ a:hover {
     padding-top: 5px;
 }
 
-nav li:first-of-type {
-    border-left: 2px solid var(--detail-color);
-}
-
 #logo-lg {
     display: none;
 }
@@ -393,6 +389,10 @@ footer i:hover {
 
     .sidebar {
         flex: 0 0 var(--fixed-space-lg);
+    }
+
+    nav li:first-of-type {
+        border-left: 2px solid var(--detail-color);
     }
 
     .sidebar img  {
